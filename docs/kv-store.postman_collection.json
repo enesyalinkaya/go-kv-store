@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "c5e1f891-96a8-4388-9111-9ed9c9cdf4c3",
+		"name": "kv-store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SET value",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": \"testvalue\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/kv/testkey",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"kv",
+						"testkey"
+					]
+				},
+				"description": "value should be string"
+			},
+			"response": []
+		},
+		{
+			"name": "GET value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/kv/testkey",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"kv",
+						"testkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flush Memory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/flush",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"flush"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health-Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/healthcheck",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
