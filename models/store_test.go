@@ -6,7 +6,7 @@ import (
 	memory "github.com/enesyalinkaya/go-kv-store/pkg/memoryDB"
 )
 
-var db = memory.NewMemoryClient("tmp/test.txt")
+var db = memory.NewMemoryClient("tmp", "test.txt")
 
 func loadSampleData() {
 	db.Set("key1", "value1")

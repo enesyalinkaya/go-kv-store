@@ -75,7 +75,7 @@ go-kv-store
 ```
 
 # REST API
-## You can use https://go-kv-store.herokuapp.com as the base URL for tests.
+## You can use https://go-kv-store.herokuapp.com as the base URL for testing.
 * `PUT /kv/:key`: Set Value
 ```bash
     curl --request PUT 'http://localhost:8080/kv/testkey' \
